@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/enquiry.css">
+    <title>Enquiry</title>
+</head>
+<body>
+        <header>
+                <!--#### Nav bar ##############-->
+            <ul class="nav-list" id="navTop">
+               
+                <li class="item"> <a href="/index.html"> Home</a> </li>
+                <li class="item"> <a href="/about.html"> About</a></li>
+                <li class="item"><a href="/enquiry.html"> Enquiry</a></li>
+                <li class="item"> <a href="/products.html"> Products and Services</a></li>
+                <li class="logo" style="float: left; padding: 0;"><a href="./index.html" class="logo"> <img src="./images/logo.png" alt="" srcset="" href= ""  width="300px" height="80px"></a></li>
+            </ul>
+            
+                
+        </header>
+
+    <form action="/enquiry.html" onsubmit="return Validate()" method="GET">
+        <div class="row">
+            <div class="col"><label for=""> Name</label> : </div>
+            <div class="col"> <p id="nameerror"></p>
+                <input type="text" name="" id="name"> <br><br></div>
+        </div>
+        
+        <div class="row">
+            <div class="col"><label for="">Number</label>:</div>
+            <div class="col">
+                    <p id="numerror"></p>
+                    <input type="number" name="" id="num"> <br><br></div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                    <label for="">Email</label>:
+            </div>
+            <div class="col">
+                    <p id="emailerror"></p>
+                    <input type="text" name="" id="email"> <br><br>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+
+                    <label for=" ">Enquiry</label> : <br>
+            </div>
+            <div class="col"> 
+                    <p id="enquiryerror"></p>
+                <textarea name="" id="enquiry" cols="35" rows="10"></textarea><br> <br>
+
+                <div class="row">
+                        <button>Submit</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <br>
+        <br>
+        <br>
+        
+
+    </form>
+       
+
+    <script>
+
+        function Validate(){
+            var name= document.querySelector("#name").value;
+            var num = document.querySelector("#num").value;
+            var email = document.querySelector("#email").value;
+            var enquiry = document.querySelector("#enquiry").value; 
+            
+        
+            if(name === ""){
+                error = document.querySelector("#nameerror");
+                error.innerHTML = "Please enter name in the name field";
+                error.style.color= "red";
+                setTimeout(()=>{
+                    error.innerHTML="";
+                }, 3000);
+
+                alert("Please enter name in the name field");
+                return false;
+                
+            }else if(email===""){
+                error = document.querySelector("#emailerror");
+                error.innerHTML = "Please enter email in the email field";
+                error.style.color= "red";
+                setTimeout(()=>{
+                    error.innerHTML="";
+                }, 3000);
+                alert("Please enter email in the email field");
+                return false;
+            }else if(email.indexOf("@")<1 ){
+                error = document.querySelector("#emailerror");
+                error.innerHTML = "Invalid email, Email should contain @";
+                error.style.color= "red";
+                setTimeout(()=>{
+                    error.innerHTML="";
+                }, 3000);
+                alert("invalid email");
+                return false;
+            }else if(enquiry===""){
+                error = document.querySelector("#enquiryerror");
+                error.innerHTML = "Please enter the enquiry";
+                error.style.color= "red";
+                setTimeout(()=>{
+                    error.innerHTML="";
+                }, 3000);
+                alert("Please enter the enquiry ");
+                return false;
+            }else if(num!= Number() ){
+                error = document.querySelector("#numerror");
+                error.innerHTML = "Please enter the enquiry";
+                error.style.color= "red";
+                setTimeout(()=>{
+                    error.innerHTML="";
+                }, 3000);
+                alert("Please enter the number ");
+                return false;
+
+
+            }else{
+                alert("Any enquiry was successfully send");
+                
+            }
+            document.getElementById("form").method=="GET";
+            document.getElementById("form").action=="/index";
+
+            return true;      
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body{
+    padding: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+    background: whitesmoke;
+ 
+}
+header{
+    border: 1px solid whitesmoke;
+}
+
+/* style for nav */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: whitesmoke;
+    
+  }
+  
+  li {
+    float: right;
+    font: bolder;
+
+
+  }
+  
+  li a {
+    display: block;
+    color: yellow;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+.item{
+      margin-top: 20px;
+      background: #333;
+      
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  .logo a:hover{
+      background: none;
+
+  }
+.aboutpara a:hover{
+  color: yellow;
+}
+  .grid-container{
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    grid-column-gap: 50px;
+  }
+.grid-item h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font: bolder;
+}
+  .grid-item{
+    background: lightyellow;
+    text-align: center;
+  }
+
+  /* aside style */
+#aside{
+  background: url('/images/bg1.jpg') no-repeat;
+  height: 430px ;
+}
+footer{
+  margin-bottom: auto;
+  bottom: 0;
+  width: 100vw;
+  margin-top: 10px;
+}
+
+
+
+
+  /* style for footer */
+  .grid{
+    display: grid;
+    background:#333;
+    grid-template-columns: 30vw 30vw 30vw;
+    margin: auto;
+  }
+  .footer-item{
+    
+    color: whitesmoke;
+    text-align: center;
+  }
+
+  #feedback{
+    background: rgba(20, 23, 226, 0.26);
+    width: 100px;
+    height: 65 px;
+    padding: auto;
+    border-radius: 10px;
+    color: yellow;
+    margin: 5px;
+    font-size: 1.5em;
+
+  }
+
+  #feedback :hover{
+    color:whitesmoke ;
+
+  }
+  .end{
+    background: #333;
+    height: 20px;
+  }
